@@ -98,7 +98,7 @@ bot.on('message', (msg) => {
 });
 
 function setDate(suntime) {
-  const date = new Date(Date.UTC(suntime) * 1000);
+  const date = new Date(suntime * 1000);
 
   if (date.getMinutes() < 10 && date.getHours() < 10) {
     return `0${date.getHours()}:0${date.getMinutes()}`;
