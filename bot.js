@@ -2,7 +2,7 @@ require('dotenv').config();
 const TelegramBot = require('node-telegram-bot-api');
 const axios = require('axios');
 
-const bot = new TelegramBot(process.env.Bot_Token, { polling: true });
+const bot = new TelegramBot(process.env.BOT_TOKEN, { polling: true });
 
 const weatherEndpoint = (id) => {
   return `http://api.openweathermap.org/data/2.5/weather?id=${id}&units=metric&lang=ru&appid=${process.env.APP_ID}`;
