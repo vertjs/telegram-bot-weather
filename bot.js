@@ -67,9 +67,8 @@ bot.onText(/\//, (msg, match) => {
         [{ text: 'г.Химки' }, { text: 'п.Быково' }],
         [{ text: 'г.Москва' }, { text: 'г.Нижний Новгород' }],
       ],
-      resize_keyboard: true
+      resize_keyboard: true,
     },
-    
   });
 });
 
@@ -99,12 +98,12 @@ bot.on('message', (msg) => {
 });
 
 function setDate(suntime) {
-  const date = new Date(suntime * 1000);
-  const d = Date.UTC(date)
-  if (d.getMinutes() < 10 && d.getHours() < 10) {
-    return `0${d.getHours()}:0${d.getMinutes()}`;
+  const date = new Date(Date.UTC(suntime) * 1000);
+
+  if (date.getMinutes() < 10 && date.getHours() < 10) {
+    return `0${date.getHours()}:0${date.getMinutes()}`;
   } else {
-    return `${d.getHours()}:${d.getMinutes()}`;
+    return `${date.getHours()}:${date.getMinutes()}`;
   }
 }
 
