@@ -19,8 +19,8 @@ const weatherHtmlTemplate = (name, main, weather, wind, sys) =>
   В течении дня: <b> от ${Math.round(main.temp_min)} до ${Math.round(main.temp_max)} °C</b>
   Влажность: <b> ${main.humidity} %</b>
   Скорость ветра: <b>${wind.speed} м/сек</b>
-  Восход солнца: <b> ${setDate(sys.sunrise)}</b>
-  Закат солнца: <b> ${setDate(sys.sunset)}</b>
+  Восход солнца: <b> ${setDate(sys.sunrise + 10800)}</b>
+  Закат солнца: <b> ${setDate(sys.sunset + 10800)}</b>
   `;
 
 // Function that gets the weather by the city name
