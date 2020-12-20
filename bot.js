@@ -81,8 +81,8 @@ function weatherHtmlTemplate(name, main, weather, wind, sys) { // перевод
 function setDate(suntime) { // форматирование времени в читаемый формат
   const date = new Date(suntime * 1000);
   if (date.getMinutes() < 10 && date.getHours() < 10) {
-    return `0${date.getHours()-3}:0${date.getMinutes()}`;
+    return `0${date.getHours()}:0${date.getMinutes()}`;
   } else {
-    return `${date.getHours()-3}:${date.getMinutes()}`;
+    return `${date.getHours()}:${date.getMinutes()}`;
   }
 }
