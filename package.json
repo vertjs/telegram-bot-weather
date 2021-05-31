@@ -2,12 +2,19 @@
   "name": "telegram-bot",
   "version": "1.0.0",
   "description": "",
-  "main": "bot.js",
+  "main": "index.js",
   "scripts": {
-    "start": "node bot.js"
+    "start": "node index.js"
   },
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vertjs/telegram-bot-weather.git"
+  },
+  "author": "vertjs",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vertjs/telegram-bot-weather/issues"
+  },
   "devDependencies": {
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.1.0",
